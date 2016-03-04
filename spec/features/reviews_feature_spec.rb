@@ -14,4 +14,13 @@ feature 'reviewing' do
      expect(page).to have_content('so so')
   end
 
+  scenario 'removes orphan reviews when parent restaurant is deleted' do
+     visit '/restaurants'
+     
+     click_link 'Delete KFC'
+     expect(current_path).to eq '/restaurants'
+     
+     expect(page).not_to have_content('so so')
+  end
+
 end
