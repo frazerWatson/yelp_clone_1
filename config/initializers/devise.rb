@@ -14,6 +14,7 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+  
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -32,6 +33,8 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
+
+  config.omniauth :facebook, Rails.application.secrets.facebook_app_id, Rails.application.secrets.facebook_app_secret
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -248,7 +251,7 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
-
+  
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.

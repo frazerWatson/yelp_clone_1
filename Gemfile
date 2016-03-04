@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -26,6 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'shoulda'
 
 gem 'devise'
+
+gem 'omniauth-facebook'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
